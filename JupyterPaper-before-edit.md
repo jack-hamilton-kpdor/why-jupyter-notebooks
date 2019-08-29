@@ -1,15 +1,15 @@
 
 <p style="text-align: center;">Paper 89-2019</p>
 
-# I Don't Use Python or R - Why Should I Use Jupyter Notebooks?
+# <div style="text-align: center;">I Don't Use Python or R </div>- Why Should I Use Jupyter Notebooks?
 
-__<p style="text-align: center;">Jack Hamilton</p>__
+__Jack Hamilton</div>__
 
-__<p style="text-align: center;">Division of Research</p>__ 
+__Division of Research__ 
 
-__<p style="text-align: center;">Kaiser Permanente</p>__
+__Kaiser Permanente__
 
-__<p style="text-align: center;">Oakland, California</p>__ 
+__Oakland, California__ 
 
 
 ## Abstract
@@ -22,7 +22,11 @@ This presentation starts with an all-SAS demonstration of Jupyter Notebooks, and
 
 ### A Note About This Paper
 
-This paper was written using the markdown document facility in Jupyter; markdown is one of the topics of this paper.  As a consequence of using pure markdown instead of Word, it will not be possible to make this paper look like all the other papers.
+This paper was written using the markdown document facility in Jupyter; markdown is one of the topics of this paper.  As a consequence of using pure markdown instead of Word, it will not be possible to make this paper look like all the other papers. 
+
+One thing I didn't completely realize about Jupyter until I wrote this presentation is what a tremendous time-saver it is to use markdown instead of Microsoft Word.  It saved at least a day of work.  Besides the time savings in the initial creation, using markdown will make updates much easier - no need to copy and paste code and results from SAS to Word, no worries about whether I've accidentally updated a piece of code without updating all the results...  It happens automatically!
+
+This presentation, updates, and source materials can be found at https://github.com/jack-hamilton-kpdor/why-jupyter-notebooks
 
 ### Some History of Notebooks
 
@@ -39,18 +43,18 @@ Notebooks have a long pedigree, both on paper and in electrons.
 
 - You can break a program up into small pieces and rerun those pieces in any order, without losing the history of what you've done.
 
-- You can easily include documentation in the notebook.
+- You can easily include documentation in the notebook using a simple but powerful markup language named _markdown_.
 
-- Not the topic of this paper, but you can switch between different programming languages in the same notebook.  Many of the SAS Institute examples use SAS and Python, or SAS and R.
+- Not the topic of this paper, but you can switch between different programming languages in the same notebook.  Many of the SAS Institute examples use SAS and Python, or SAS and R; other languages are also available.
 
 
 ### Why should you care about Notebooks?
 
-Why should you care about notebooks?  Maybe you shouldn't.  You might not need or want anything Jupyter does, or you might find it slow and cumbersome (the way I feel about Enterprise Guide, which many people claim to like), or you may have existing processes that are time-tested and comfortable.
+Why should you care about notebooks?  Maybe you shouldn't.  You might not need or want anything Jupyter does, or you might find it slow and cumbersome (the way I feel about Enterprise Guide, which many people claim to like), or you may have existing processes that are time-tested and comfortable.  But I've found it very useful, especially for small-ish projects that need to be presented to others.  Having the programs and documentation is one place is a big time-saver.
 
 ### A PR Problem
 
-Jupyter has a bit of a PR problem for SAS programmers.  It's often presented as a way to do things that plain old fashioned programmers like me don't want to do, such as passing data to Python to do in 12 steps something I could do in SAS in 1 step.  And the "advertising" uses a lot of buzzwords (italics mine):
+Jupyter has a bit of a PR problem for traditional SAS programmers.  It's often presented as a way to do things that plain old fashioned coders like me don't need or want to do, such as passing data to Python to do in 12 steps something I could do in SAS in 1 step.  And the "advertising" uses a lot of buzzwords (italics mine):
 
 >With the recent introduction of the official SASPy package, it is now trivial to incorporate SAS® into new
 _workflows_ _leveraging_ the simple yet _presentationally elegant_ Jupyter Notebook _coding and publication
@@ -66,7 +70,7 @@ Also, the examples tend to emphasize Pythonic aspects of Notebooks:
 
 Nice, but a bit scary as the first example in an introduction.
 
-Note, of course, that the SAS equivalent would be equally scary to a Python programmer, might even have more lines of code.
+Note, of course, that the SAS equivalent would be equally scary to a Python programmer, and might even have more lines of code.
 
 ## Looking at a Notebook
 
@@ -89,9 +93,9 @@ This looks quite a bit like a more traditional interface, just arranged differen
 
 This also illustrates one of the most important concepts in Jupyter - __cells__.  A cell in Python is a box that might contain SAS code, SAS log output, SAS ODS output, or documentation.  
 
-__To run the code in a cell, I position the cursor in the cell and click on the right-pointing triangle in the command bar.__ 
+To run the code in a cell, I position the cursor in the cell and click on the right-pointing triangle in the command bar.
 
-After code has completed, you will see two types of cells.  The cell with text in a grey box (labeled with a blue 1 at the left) is a code cell, and the cell underneath (with a red 1) is an output cell that shows the log resulting from running the code in the code cell.  The code cell is editable, and as you can see, it has some syntax coloring.
+After the code has completed running, you will see two types of cells.  The cell with text in a grey box (labeled with a blue 1 at the left) is a code cell, and the cell underneath (with a red 1) is an output cell that shows the log resulting from running the code in the code cell.  The code cell is editable, and as you can see, it has some syntax coloring.
 
 Like SAS Studio and Enterprise Guide, Jupyter sends code off into the ether to run.  Generally will go to a server somewhere.  The first thing to happen is establishing a connection, as shown in ``SAS Connection established. Subprocess id is 16416``.  There's usually a 10-20 second pause while communications are being established, but that happens only once at the beginning.  Jupyter will keep re-using the same connection until you close it.
 
@@ -124,17 +128,17 @@ I might have the same problem with Notebook code:
 
 ![](images/nonsplit1.png)
 
-But I can position the cursor where I want the code to be split, select a menu item or hotkey, and 
+But I can position the cursor where I want the code to be split, select a menu item or hotkey, and: 
 
 ![](images/split1.png)
 
 It's harder to accidentally run more than one cell at a time, because there's no command bar icon for that action.
 
-After you have finished debugging or testing, you can join the cells together again.
+After you have finished debugging or testing, you can join the cells together again if you want.  How large the code sections are is a matter of style.  
 
 ## Documentation
 
-There are lots of good things about Jupyter, but one of the best is that it includes support for "markdown", which is a text-based format for rich.  This presentation was written entirely in markdown.
+There are lots of good things about Jupyter, but one of the best is that it includes support for "markdown", which is a text-based format for rich text display.  This presentation was written entirely in markdown.
 
 What I like about markdown:
 
@@ -142,34 +146,43 @@ What I like about markdown:
 
 - It looks like plain text, because it is plain text.  Markdown elements that tell Jupyter how to display the documentation are just text, and are not hard to understand even if you don't have a markdown viewer.
 
+>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. http://daringfireball.net/projects/markdown/
+
 - It's not Powerpoint or Word.  There are no invisible settings that do weird things to your document and are impossible to find.
 
 - There are both free and commercial programs to edit and display markdown outside of Jupyter.  UltraEdit and Sublime Edit are commercial editors that can display markdown in additon to being general purpose editors.  Caret is an example of a commercial editor that specializes in markdown; it's what I used to put the finishing touches on this document (which was otherwise written entirely in Jupyter)  
 
 What I don't like about markdown:
 
-- You don't have the complete control over every aspect of appearance that you can get in Word or Powerpoint if you spend hours slaving over a hot keyboard. You can use raw HTML, but ugh.  Still, HTML code is useful for things like highlighting text and creating page breaks in output.
+- I don't have the complete control over every aspect of appearance that I can get in Word or Powerpoint if I spend hours slaving over a hot keyboard. You can use raw HTML and CSS, but ugh.  Still, basic HTML code is useful for <span style='background-color: lavenderblush'>highlighting text</span> and creating page breaks in output.  Also, you can use HTML comments to exclude text from display while still keeping it available.
+
+<!-- list of named colors: https://htmlcolorcodes.com/color-names/ -->
 
 - There are several different versions of markdown, slightly incompatible with each other, and it's hard even to know which version a particular program is using.
 
+If you want to try markdown without installing Jupyter, you can use this online version, which includes Python but not SAS:
+
+https://jupyter.org/try
+
+
 ### What does markdown look like?
 
-It looks like text when you type it, and like a formatted document when you display it.  I might go back and edit the first part of this presentation, but at the time I am writing this section it looked like this:
-
+It looks like text when you type it, and like a formatted document when you display it.  An earlier version of the first part of this presentation looked like this:
+    
 > ![](images/markdown1.png)
-
+        
 Different text sizes, indented text, bullet points - all things you might want in a document.  The source looks like this:
 
 > ![](images/markdown2.png)
 
-And tables, which are a chore to set up in Word or Powerpoint.  In markdown, you just type in the data with some straightforward markup:
+And it does tables, which can be a chore to set up in Word or Powerpoint.  In markdown, you just type in the data with some straightforward markup:
 
 ``` markdown
-| Title                   | Author            | Price  |
-| ----------------------- | ----------------- | -----: |
-| Meditations             | Marcus Aurelius   | 10.00  |
-| Rational Optimist       | Matt Ridley       | 12.00  |
-| Poor Charlie's Almanack | Charles T. Munger | 16.50  |
+| Title                    | Author              | Price  |
+| :----------------------- | :-----------------: | -----: |
+| Meditations              | Marcus Aurelius     | 10.00  |
+| Rational Optimist        | Matt Ridley         | 12.00  |
+| Poor Charlie's Almanack  | Charles T. Munger   | 16.50  |
 ```
 
 and you get this:
@@ -182,11 +195,11 @@ and you get this:
 
 You don't even need to make the input columns line up if you don't want to.
 
-You can also enter math symbols and equations in some versions of markdown, and simple graphs.  Some features will not be displayed correctly unless you use a different renderer (this is probably fixable, but I don't know how).
+You can also enter math symbols and equations in some versions of markdown.
 
 ## Additional Features
 
-Jupyter is extensible, and there are numerous extensions out there, of varying quality.  
+Jupyter is extensible, and there are numerous extensions out there, of varying quality.  Here are some I have found helpful:
 
 ### Table of Contents
 
@@ -194,7 +207,7 @@ The table of contents extension is really handy.  If you have a large document, 
 
 ![](images/toc.png)
 
-### imgclip
+### imgclip for images from the clipboard
 
 This extension lets you copy and paste an image into a markdown cell.  Can't easily show this on paper, but if there's time, I'll do a demo.
 
@@ -217,57 +230,108 @@ nbdiff-web JupyterPaper.ipynb backup\JupyterPaper-backup.ipynb
 
 ### Jupyter Magics
 
-If a code cell starts with a % sign, Jupyter interprets it as a command.  You can get a list in the Help menu.  Here are a few:
+If a code cell starts with a % sign, Jupyter interprets it as a command (called a "magic").  You can get a list of magics in the Help menu, or with the ``%lsmagic`` magic.  Here are a few
 
 
 ```sas
 %%time
-%connect_info
-%ls -r .
+
+%put Shows cell execution time
 ```
 
-    {
-      "stdin_port": 64622,
-      "shell_port": 64620,
-      "iopub_port": 64621,
-      "hb_port": 64624,
-      "ip": "127.0.0.1",
-      "key": "c786d283-beff49977b4fbd9de5bc11dd",
-      "signature_scheme": "hmac-sha256",
-      "transport": "tcp"
-    }
-    
-    Paste the above JSON into a file, and connect with:
-        $> ipython <app> --existing <file>
-    or, if you are local, you can connect with just:
-        $> ipython <app> --existing c786d283-beff49977b4fbd9de5bc11dd
-    
-    or even just:
-        $> ipython <app> --existing
-    if this is the most recent Jupyter session you have started.
-    
-    Time: 0.015003681182861328 seconds.
+    Time: 0.7189953327178955 seconds.
     
     
 
 
 
 
-./<br>
-&nbsp;&nbsp;<a href='./image-test.ipynb' target='_blank'>image-test.ipynb</a><br>
-&nbsp;&nbsp;<a href='./JupyterPaper.ipynb' target='_blank'>JupyterPaper.ipynb</a><br>
-.\.ipynb_checkpoints/<br>
-&nbsp;&nbsp;<a href='./.ipynb_checkpoints/image-test-checkpoint.ipynb' target='_blank'>image-test-checkpoint.ipynb</a><br>
-&nbsp;&nbsp;<a href='./.ipynb_checkpoints/JupyterPaper-backup.ipynb' target='_blank'>JupyterPaper-backup.ipynb</a><br>
-&nbsp;&nbsp;<a href='./.ipynb_checkpoints/JupyterPaper-checkpoint.ipynb' target='_blank'>JupyterPaper-checkpoint.ipynb</a><br>
-&nbsp;&nbsp;<a href='./.ipynb_checkpoints/pythonexample-checkpoint.png' target='_blank'>pythonexample-checkpoint.png</a><br>
-&nbsp;&nbsp;<a href='./.ipynb_checkpoints/Untitled-checkpoint.ipynb' target='_blank'>Untitled-checkpoint.ipynb</a><br>
-.\backup/<br>
-&nbsp;&nbsp;<a href='./backup/JupyterPaper-backup.ipynb' target='_blank'>JupyterPaper-backup.ipynb</a><br>
-.\backup\.ipynb_checkpoints/<br>
-&nbsp;&nbsp;<a href='./backup/.ipynb_checkpoints/JupyterPaper-backup-checkpoint.ipynb' target='_blank'>JupyterPaper-backup-checkpoint.ipynb</a><br>
-.\images/<br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #ffffff; }
+body .c { color: #0000FF } /* Comment */
+body .k { color: #ff0000; font-weight: bold } /* Keyword */
+body .n { color: #008000 } /* Name */
+body .ch { color: #0000FF } /* Comment.Hashbang */
+body .cm { color: #0000FF } /* Comment.Multiline */
+body .cp { color: #0000FF } /* Comment.Preproc */
+body .cpf { color: #0000FF } /* Comment.PreprocFile */
+body .c1 { color: #0000FF } /* Comment.Single */
+body .cs { color: #0000FF } /* Comment.Special */
+body .kc { color: #ff0000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #ff0000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #ff0000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #ff0000; font-weight: bold } /* Keyword.Pseudo */
+body .kr { color: #ff0000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #ff0000; font-weight: bold } /* Keyword.Type */
+body .s { color: #111111 } /* Literal.String */
+body .na { color: #008000 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #008000 } /* Name.Class */
+body .no { color: #008000 } /* Name.Constant */
+body .nd { color: #008000 } /* Name.Decorator */
+body .ni { color: #008000 } /* Name.Entity */
+body .ne { color: #008000 } /* Name.Exception */
+body .nf { color: #008000 } /* Name.Function */
+body .nl { color: #008000 } /* Name.Label */
+body .nn { color: #008000 } /* Name.Namespace */
+body .nx { color: #008000 } /* Name.Other */
+body .py { color: #008000 } /* Name.Property */
+body .nt { color: #008000 } /* Name.Tag */
+body .nv { color: #008000 } /* Name.Variable */
+body .sa { color: #111111 } /* Literal.String.Affix */
+body .sb { color: #111111 } /* Literal.String.Backtick */
+body .sc { color: #111111 } /* Literal.String.Char */
+body .dl { color: #111111 } /* Literal.String.Delimiter */
+body .sd { color: #111111 } /* Literal.String.Doc */
+body .s2 { color: #111111 } /* Literal.String.Double */
+body .se { color: #111111 } /* Literal.String.Escape */
+body .sh { color: #111111 } /* Literal.String.Heredoc */
+body .si { color: #111111 } /* Literal.String.Interpol */
+body .sx { color: #111111 } /* Literal.String.Other */
+body .sr { color: #111111 } /* Literal.String.Regex */
+body .s1 { color: #111111 } /* Literal.String.Single */
+body .ss { color: #111111 } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .fm { color: #008000 } /* Name.Function.Magic */
+body .vc { color: #008000 } /* Name.Variable.Class */
+body .vg { color: #008000 } /* Name.Variable.Global */
+body .vi { color: #008000 } /* Name.Variable.Instance */
+body .vm { color: #008000 } /* Name.Variable.Magic */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span></span><span class="err">10</span> <span class="err">The</span> <span class="err">SAS</span> <span class="err">System</span>                                                                                                                                                                                                                <span class="err">14:07</span> <span class="err">Thursday,</span> <span class="err">August</span> <span class="err">29,</span> <span class="err">2019</span><br><br><span class="s">372        ods listing close;ods html5 (id=saspy_internal) file=_tomods1 options(bitmap_mode=&#39;inline&#39;) device=svg style=HTMLBlue; ods graphics on / outputfmt=png;</span><br><span class="cm">NOTE: Writing HTML5(SASPY_INTERNAL) Body file: _TOMODS1</span><br><span class="s">373        </span><br><span class="s">374        </span><br><span class="s">375        %put Shows cell execution time</span><br><span class="s">376        </span><br><span class="s">377        ods html5 (id=saspy_internal) close;ods listing;</span><br><span class="err">Shows</span> <span class="err">cell</span> <span class="err">execution</span> <span class="err">time</span><br><span class="s">378        </span><br></pre></div>
+</body>
+</html>
+
+
+
+
+
+```sas
+%ls -r ./images
+```
+
+
+
+
+./images/<br>
 &nbsp;&nbsp;<a href='./images/Capture.JPG' target='_blank'>Capture.JPG</a><br>
+&nbsp;&nbsp;<a href='./images/extensions.png' target='_blank'>extensions.png</a><br>
 &nbsp;&nbsp;<a href='./images/markdown1.png' target='_blank'>markdown1.png</a><br>
 &nbsp;&nbsp;<a href='./images/markdown2.png' target='_blank'>markdown2.png</a><br>
 &nbsp;&nbsp;<a href='./images/nbdime.png' target='_blank'>nbdime.png</a><br>
@@ -278,45 +342,42 @@ If a code cell starts with a % sign, Jupyter interprets it as a command.  You ca
 &nbsp;&nbsp;<a href='./images/saswin1.PNG' target='_blank'>saswin1.PNG</a><br>
 &nbsp;&nbsp;<a href='./images/split1.png' target='_blank'>split1.png</a><br>
 &nbsp;&nbsp;<a href='./images/toc.png' target='_blank'>toc.png</a><br>
-&nbsp;&nbsp;<a href='./images/Untitled.ipynb' target='_blank'>Untitled.ipynb</a><br>
-.\images\.ipynb_checkpoints/<br>
-&nbsp;&nbsp;<a href='./images/.ipynb_checkpoints/newnotebook1-checkpoint.png' target='_blank'>newnotebook1-checkpoint.png</a><br>
-&nbsp;&nbsp;<a href='./images/.ipynb_checkpoints/pythonexample-checkpoint.png' target='_blank'>pythonexample-checkpoint.png</a><br>
-&nbsp;&nbsp;<a href='./images/.ipynb_checkpoints/Untitled-checkpoint.ipynb' target='_blank'>Untitled-checkpoint.ipynb</a><br>
-.\wuss-resources/<br>
-&nbsp;&nbsp;<a href='./wuss-resources/WUSS2019-Copyright-Grant-Form.pdf' target='_blank'>WUSS2019-Copyright-Grant-Form.pdf</a><br>
-&nbsp;&nbsp;<a href='./wuss-resources/WUSS2019-Paper-Template.docx' target='_blank'>WUSS2019-Paper-Template.docx</a><br>
-&nbsp;&nbsp;<a href='./wuss-resources/WUSS2019-Seattle-Presentation-Template.pptx' target='_blank'>WUSS2019-Seattle-Presentation-Template.pptx</a><br>
-&nbsp;&nbsp;<a href='./wuss-resources/~$SS2019-Paper-Template.docx' target='_blank'>~$SS2019-Paper-Template.docx</a><br>
-&nbsp;&nbsp;<a href='./wuss-resources/~$WUSS2019-Seattle-Presentation-Template.pptx' target='_blank'>~$WUSS2019-Seattle-Presentation-Template.pptx</a><br>
 
 
+
+
+```sas
+%lsmagic
+```
+
+    Available line magics:
+    %activity  %cd  %connect_info  %conversation  %dot  %download  %edit  %get  %help  %html  %include  %install  %install_magic  %javascript  %jigsaw  %kernel  %kx  %latex  %load  %ls  %lsmagic  %macro  %magic  %matplotlib  %parallel  %plot  %pmap  %prompt4var  %px  %python  %reload_magics  %restart  %run  %scheme  %set  %shell  %showFullLog  %showLog
+    
+    Available cell magics:
+    %%activity  %%brain  %%conversation  %%debug  %%dot  %%file  %%help  %%html  %%javascript  %%kx  %%latex  %%macro  %%pipe  %%processing  %%prompt4var  %%px  %%python  %%scheme  %%shell  %%show  %%time  %%tutor
+    
 
 ## Problems with Jupyter
 
 OK, it's not perfect.  
 
-- Probably the biggest lack is the ability of browse SAS data sets.  You can run a PROC PRINT, but there's no equivalent of viewtable (that I know of - there might well be one I don't know of).
+- Probably the biggest is lack of the ability to browse SAS data sets.  You can run a PROC PRINT, but there's no equivalent of viewtable (that I know of - there might well be one I don't know of, and there's no reason it couldn't be done).
 
 - You can't interrupt it in the middle of a step if it seems to be hung up.  All you can do is kill it.  You won't get the current log if you kill a session, so problems can be hard to debug.
 
-- % signs have a special meaning.  You can't start a code cell with a %, so if you want to define or call a macro as the first action, you will need to put in a comment first.  
+- % signs have a special meaning.  If you want to define or call a macro as the first action, you will need to put in a comment first.  
 
-- Alignment in tables can be wacky.  You might have to use a markdown editor on the finished notebook.
-
-- There are no wizards to generate code for you, and there's no autocomplete in the editor.  I don't think those things are impossible, they're just not there yet.  It might be possible to prompt for input using 
+- There are no wizards to generate code for you, and there's no autocomplete in the editor.  I don't think those things are impossible, they're just not there yet.  It might be possible to prompt for input using ipwidgets, but I have not looked into that.  You'd have to learn Python, but you already need to learn additional languages to create tasks in SAS Studio or EG.
 
 - Keyboard assignments are different from those in SAS for Windows or SAS Studio, and you will have to learn them, or reassign them, or use the Menu or Command Palette.
 
 - Jupyter supports only one kind of output per code cell.  SAS has two different kinds of output - log and list/results, but you can get only one of them to display automatically.  See Appendix 1 for an example.
 
-
-
 <div style="page-break-after: always;"></div> 
 
 ## Appendix 1 : Need to save and restore output
 
-If there are no errors in the log, you won't see the log.
+If there are no errors in the log, and ODS output was created, you won't see the log in Jupyter:
 
 
 ```sas
@@ -1445,13 +1506,15 @@ You won't see the log from that code cell, because it created output and there w
 
 Another way to get around this problem is to do all the data processing that doesn't produce output in one step, and isolate the code that produces output in a cell of its own.
 
+<div style="page-break-after: always;"></div> 
+
 ## Appendix 2 : Show both log and output
 
 You can turn ODS output on and off.  
 
 ### Macros to control ODS output
 
-
+<!-- You don't need to see the log for this, so after running it, clear the cell output. -->
 
 
 ```sas
@@ -1599,85 +1662,7 @@ You can turn ODS output on and off.
 %mend util_replay_ods_document;
 ```
 
-
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
-<html>
-<head>
-  <title></title>
-  <meta http-equiv="content-type" content="text/html; charset=None">
-  <style type="text/css">
-td.linenos { background-color: #f0f0f0; padding-right: 10px; }
-span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
-pre { line-height: 125%; }
-body .hll { background-color: #ffffcc }
-body  { background: #ffffff; }
-body .c { color: #0000FF } /* Comment */
-body .k { color: #ff0000; font-weight: bold } /* Keyword */
-body .n { color: #008000 } /* Name */
-body .ch { color: #0000FF } /* Comment.Hashbang */
-body .cm { color: #0000FF } /* Comment.Multiline */
-body .cp { color: #0000FF } /* Comment.Preproc */
-body .cpf { color: #0000FF } /* Comment.PreprocFile */
-body .c1 { color: #0000FF } /* Comment.Single */
-body .cs { color: #0000FF } /* Comment.Special */
-body .kc { color: #ff0000; font-weight: bold } /* Keyword.Constant */
-body .kd { color: #ff0000; font-weight: bold } /* Keyword.Declaration */
-body .kn { color: #ff0000; font-weight: bold } /* Keyword.Namespace */
-body .kp { color: #ff0000; font-weight: bold } /* Keyword.Pseudo */
-body .kr { color: #ff0000; font-weight: bold } /* Keyword.Reserved */
-body .kt { color: #ff0000; font-weight: bold } /* Keyword.Type */
-body .s { color: #111111 } /* Literal.String */
-body .na { color: #008000 } /* Name.Attribute */
-body .nb { color: #008000 } /* Name.Builtin */
-body .nc { color: #008000 } /* Name.Class */
-body .no { color: #008000 } /* Name.Constant */
-body .nd { color: #008000 } /* Name.Decorator */
-body .ni { color: #008000 } /* Name.Entity */
-body .ne { color: #008000 } /* Name.Exception */
-body .nf { color: #008000 } /* Name.Function */
-body .nl { color: #008000 } /* Name.Label */
-body .nn { color: #008000 } /* Name.Namespace */
-body .nx { color: #008000 } /* Name.Other */
-body .py { color: #008000 } /* Name.Property */
-body .nt { color: #008000 } /* Name.Tag */
-body .nv { color: #008000 } /* Name.Variable */
-body .sa { color: #111111 } /* Literal.String.Affix */
-body .sb { color: #111111 } /* Literal.String.Backtick */
-body .sc { color: #111111 } /* Literal.String.Char */
-body .dl { color: #111111 } /* Literal.String.Delimiter */
-body .sd { color: #111111 } /* Literal.String.Doc */
-body .s2 { color: #111111 } /* Literal.String.Double */
-body .se { color: #111111 } /* Literal.String.Escape */
-body .sh { color: #111111 } /* Literal.String.Heredoc */
-body .si { color: #111111 } /* Literal.String.Interpol */
-body .sx { color: #111111 } /* Literal.String.Other */
-body .sr { color: #111111 } /* Literal.String.Regex */
-body .s1 { color: #111111 } /* Literal.String.Single */
-body .ss { color: #111111 } /* Literal.String.Symbol */
-body .bp { color: #008000 } /* Name.Builtin.Pseudo */
-body .fm { color: #008000 } /* Name.Function.Magic */
-body .vc { color: #008000 } /* Name.Variable.Class */
-body .vg { color: #008000 } /* Name.Variable.Global */
-body .vi { color: #008000 } /* Name.Variable.Instance */
-body .vm { color: #008000 } /* Name.Variable.Magic */
-
-  </style>
-</head>
-<body>
-<h2></h2>
-
-<div class="highlight"><pre><span></span><span class="err">9</span> <span class="err">The</span> <span class="err">SAS</span> <span class="err">System</span>                                                                                                                                                                                                                <span class="err">13:18</span> <span class="err">Wednesday,</span> <span class="err">August</span> <span class="err">28,</span> <span class="err">2019</span><br><br><span class="s">224        ods listing close;ods html5 (id=saspy_internal) file=_tomods1 options(bitmap_mode=&#39;inline&#39;) device=svg style=HTMLBlue; ods graphics on / outputfmt=png;</span><br><span class="cm">NOTE: Writing HTML5(SASPY_INTERNAL) Body file: _TOMODS1</span><br><span class="s">225        </span><br><span class="s">226        /* Macro to get list of open output destinations. */</span><br><span class="s">227        %macro util_return_open_ods_dests(delim= |, showdests=1, returndests=1);</span><br><span class="s">228        </span><br><span class="s">229            %let data = %UPCASE(sashelp.vdest);</span><br><span class="s">230        </span><br><span class="s">231            %local dsid ;</span><br><span class="s">232        </span><br><span class="s">233            /* Open the data set.  */</span><br><span class="s">234            %let dsid = %SYSFUNC(open(&amp;DATA., I));</span><br><span class="s">235        </span><br><span class="s">236            %if &amp;DSID.=0 %then</span><br><span class="s">237                %do;</span><br><span class="s">238                    %put ERR%str()OR: Error opening dataset &amp;DATA..;</span><br><span class="s">239                    %put %sysfunc(sysmsg());</span><br><span class="s">240                    %return;</span><br><span class="s">241                %end;</span><br><span class="s">242        </span><br><span class="s">243            /* Get variable numbers */</span><br><span class="s">244            %local dest_var_num style_var_num ;</span><br><span class="s">245        </span><br><span class="s">246            %let dest_var_num = %sysfunc(varnum(&amp;DSID. , DESTINATION));</span><br><span class="s">247            %if &amp;DEST_VAR_NUM.= 0 %then</span><br><span class="s">248                %do;</span><br><span class="s">249                    %put ERR%str()OR: Variable not in data set.;</span><br><span class="s">250                    %put %sysfunc(sysmsg());</span><br><span class="s">251                    %goto exit;</span><br><span class="s">252                %end;</span><br><span class="s">253        </span><br><span class="s">254            %let style_var_num = %sysfunc(varnum(&amp;DSID. , STYLE));</span><br><span class="s">255            %if &amp;STYLE_VAR_NUM.= 0 %then</span><br><span class="s">256                %do;</span><br><span class="s">257                    %put ERR%str()OR: Variable not in data set.;</span><br><span class="s">258                    %put %sysfunc(sysmsg());</span><br><span class="s">259                    %goto exit;</span><br><span class="s">260                %end;</span><br><span class="s">261        </span><br><span class="s">262            /* Get the values. */</span><br><span class="s">263        </span><br><span class="s">264            %local fetch_rc name_value style_value ;</span><br><span class="s">265        </span><br><span class="s">266            %let fetch_rc = 0;</span><br><span class="s">267        </span><br><span class="s">268            %do %until (&amp;FETCH_RC. ne 0);</span><br><span class="s">269                %let fetch_rc = %sysfunc(fetch(&amp;DSID., noset));</span><br><span class="s">270                %if &amp;FETCH_RC. ne 0 %then</span><br><span class="s">271                    %goto exit;</span><br><span class="s">272                %let name_value = %sysfunc(getvarc(&amp;DSID., &amp;DEST_VAR_NUM.));</span><br><span class="s">273                %let style_value = %sysfunc(getvarc(&amp;DSID., &amp;STYLE_VAR_NUM.));</span><br><span class="s">274                %if &amp;SHOWDESTS. %then</span><br><span class="s">275                    %put NOTE: ODS Destination &amp;NAME_VALUE. is open with style &amp;STYLE_VALUE.;</span><br><span class="s">276                %if &amp;RETURNDESTS. %then</span><br><span class="s">277                    %do;</span><br><span class="s">278                    &amp;DELIM.&amp;NAME_VALUE.</span><br><span class="s">279                %end;</span><br><span class="s">280            %end;</span><br><span class="s">281        </span><br><span class="s">282        %EXIT:</span><br><span class="s">283        </span><br><span class="s">284            %local close_rc ;</span><br><span class="s">285        </span><br><span class="s">286            %let close_rc = %SYSFUNC(close(&amp;DSID.));</span><br><span class="s">287        </span><br><span class="s">288            %if &amp;CLOSE_RC. ne 0 %then</span><br><span class="s">289                %do;</span><br><span class="s">290                    %put ERR%str()OR: Error closing dataset &amp;DATA..;</span><br><span class="s">291                    %put %sysfunc(sysmsg());</span><br><span class="s">292                %end;</span><br><span class="s">293        </span><br><span class="s">294            %return;</span><br><span class="s">295        </span><br><span class="s">296        %mend util_return_open_ods_dests;</span><br><span class="s">297        </span><br><span class="s">298        </span><br><span class="s">299        /* Macro to send default output to ODS document */</span><br><span class="s">300        %macro util_reroute_ods_to_document(name=work.__thisdoc, delim=|);</span><br><span class="s">301        </span><br><span class="s">302            %local i outcount outdest outlist;</span><br><span class="s">303        </span><br><span class="s">304            %let name = %upcase(&amp;NAME.);</span><br><span class="s">305        </span><br><span class="s">306            %put NOTE: ODS Output will be rerouted to ODS Document &amp;NAME. ;</span><br><span class="s">307        </span><br><span class="s">308            %let outlist = %util_return_open_ods_dests(delim=&amp;DELIM.);</span><br><span class="s">309        </span><br><span class="s">310            %let outcount = %sysfunc(countw(%superq(outlist), %superq(delim)));</span><br><span class="s">311        </span><br><span class="s">312            %if &amp;OUTCOUNT. = 0 %then</span><br><span class="s">313                %do;</span><br><span class="s">314                %put NOTE: No ODS Destinations active.;</span><br><span class="s">315                %return;</span><br><span class="s">316                %end;</span><br><span class="s">317        </span><br><span class="s">318            %do i = 1 %to &amp;OUTCOUNT.;</span><br><span class="s">319                %let outdest = %scan(%superq(OUTLIST), &amp;I., %superq(DELIM));</span><br><span class="s">320                %if &quot;&amp;OUTDEST.&quot; ne &quot;DOCUMENT&quot; %then</span><br><span class="s">321                    %do;</span><br><span class="s">322                        %put NOTE: ods &amp;OUTDEST. exclude all;</span><br><span class="s">323                        ods &amp;OUTDEST. exclude all;</span><br><span class="s">324                    %end;</span><br><span class="s">325            %end;</span><br><span class="s">326        </span><br><span class="s">327            %put NOTE: ods document name=&amp;NAME. (write);</span><br><span class="s">328            ods document name=&amp;NAME. (write);</span><br><span class="s">329        </span><br><span class="s">330        %mend util_reroute_ods_to_document;</span><br><span class="s">331        </span><br><span class="s">332        /* Macro to replay ODS document. */</span><br><span class="s">333        %macro util_replay_ods_document(name=work.__thisdoc, delim=|);</span><br><span class="s">334        </span><br><span class="s">335            %local i outcount outdest outlist;</span><br><span class="s">336        </span><br><span class="s">337            %let name = %upcase(&amp;NAME.);</span><br><span class="s">338        </span><br><span class="s">339            %put NOTE: ODS Output will be reprinted from ODS Document &amp;NAME. ;</span><br><span class="s">340        </span><br><span class="s">341            %let outlist = %util_return_open_ods_dests(delim=&amp;DELIM.);</span><br><span class="s">342        </span><br><span class="s">343            %let outcount = %sysfunc(countw(%superq(outlist), %superq(delim)));</span><br><span class="s">344        </span><br><span class="s">345            %if &amp;OUTCOUNT. = 0 %then</span><br><span class="s">346                %do;</span><br><span class="s">347                %put NOTE: No ODS Destinations active.;</span><br><span class="s">348                %return;</span><br><span class="s">349                %end;</span><br><span class="s">350        </span><br><span class="s">351            %do i = 1 %to &amp;OUTCOUNT.;</span><br><span class="s">352                %let outdest = %scan(%superq(OUTLIST), &amp;I., %superq(DELIM));</span><br><span class="s">353                %if &quot;&amp;OUTDEST.&quot; ne &quot;DOCUMENT&quot; %then</span><br><span class="s">354                    %do;</span><br><span class="s">355                        %put NOTE: ods &amp;OUTDEST. select all;</span><br><span class="s">356                        ods &amp;OUTDEST. select all;</span><br><span class="s">357                    %end;</span><br><span class="s">358            %end;</span><br><span class="s">359        </span><br><span class="s">360            ods document close;</span><br><span class="s">361        </span><br><span class="s">362            proc document name=&amp;NAME.;</span><br><span class="s">363                replay;</span><br><span class="s">364                run;</span><br><span class="s">365            quit;</span><br><span class="s">366        </span><br><span class="s">367        %mend util_replay_ods_document;</span><br><span class="s">368        </span><br><span class="s">369        ods html5 (id=saspy_internal) close;ods listing;</span><br><span class="s">370        </span><br></pre></div>
-</body>
-</html>
-
-
-
-
-### Use util_reroute_ods_to_document macro to reroute output
+### Use %util_reroute_ods_to_document() macro to reroute output
 
 
 ```sas
@@ -1764,14 +1749,14 @@ body .vm { color: #008000 } /* Name.Variable.Magic */
 <body>
 <h2></h2>
 
-<div class="highlight"><pre><span></span><span class="err">10</span> <span class="err">The</span> <span class="err">SAS</span> <span class="err">System</span>                                                                                                                                                                                                               <span class="err">13:18</span> <span class="err">Wednesday,</span> <span class="err">August</span> <span class="err">28,</span> <span class="err">2019</span><br><br><span class="s">373        ods listing close;ods html5 (id=saspy_internal) file=_tomods1 options(bitmap_mode=&#39;inline&#39;) device=svg style=HTMLBlue; ods graphics on / outputfmt=png;</span><br><span class="cm">NOTE: Writing HTML5(SASPY_INTERNAL) Body file: _TOMODS1</span><br><span class="s">374        </span><br><span class="s">375        /* No log was produced above.  If you want both log and output, reroute the output and play it back separately. */</span><br><span class="s">376        </span><br><span class="s">377        %util_reroute_ods_to_document();</span><br><span class="cm">NOTE: ODS Output will be rerouted to ODS Document WORK.__THISDOC</span><br><span class="cm">NOTE: ODS Destination HTML5(SASPY_INTERNAL) is open with style HTMLBlue</span><br><span class="cm">NOTE: ods HTML5(SASPY_INTERNAL) exclude all</span><br><span class="cm">NOTE: ods document name=WORK.__THISDOC (write)</span><br><span class="s">378        </span><br><span class="s">379        proc sgplot data=SASHELP.CLASS;</span><br><span class="s">380            heatmap x=Height y=Weight / name=&#39;HeatMap&#39;;</span><br><span class="s">381            gradlegend &#39;HeatMap&#39;;</span><br><span class="s">382        run;</span><br><br><span class="cm">NOTE: PROCEDURE SGPLOT used (Total process time):</span><br><span class="cm">      real time           0.01 seconds</span><br><span class="cm">      cpu time            0.02 seconds</span><br><span class="cm">      memory              782.84k</span><br><span class="cm">      OS Memory           25,264.00k</span><br><span class="cm">      Timestamp           2019-08-28 13:18:06 </span><br><span class="cm">      </span><br><span class="cm">NOTE: There were 19 observations read from the data set SASHELP.CLASS.</span><br><br><span class="s">383        </span><br><span class="s">384        /* Log will appear below */</span><br><span class="s">385        </span><br><span class="s">386        ods html5 (id=saspy_internal) close;ods listing;</span><br><span class="s">387        </span><br></pre></div>
+<div class="highlight"><pre><span></span><span class="err">13</span> <span class="err">The</span> <span class="err">SAS</span> <span class="err">System</span>                                                                                                                                                                                                                <span class="err">14:07</span> <span class="err">Thursday,</span> <span class="err">August</span> <span class="err">29,</span> <span class="err">2019</span><br><br><span class="s">540        ods listing close;ods html5 (id=saspy_internal) file=_tomods1 options(bitmap_mode=&#39;inline&#39;) device=svg style=HTMLBlue; ods graphics on / outputfmt=png;</span><br><span class="cm">NOTE: Writing HTML5(SASPY_INTERNAL) Body file: _TOMODS1</span><br><span class="s">541        </span><br><span class="s">542        /* No log was produced above.  If you want both log and output, reroute the output and play it back separately. */</span><br><span class="s">543        </span><br><span class="s">544        %util_reroute_ods_to_document();</span><br><span class="cm">NOTE: ODS Output will be rerouted to ODS Document WORK.__THISDOC</span><br><span class="cm">NOTE: ODS Destination HTML5(SASPY_INTERNAL) is open with style HTMLBlue</span><br><span class="cm">NOTE: ods HTML5(SASPY_INTERNAL) exclude all</span><br><span class="cm">NOTE: ods document name=WORK.__THISDOC (write)</span><br><span class="s">545        </span><br><span class="s">546        proc sgplot data=SASHELP.CLASS;</span><br><span class="s">547            heatmap x=Height y=Weight / name=&#39;HeatMap&#39;;</span><br><span class="s">548            gradlegend &#39;HeatMap&#39;;</span><br><span class="s">549        run;</span><br><br><span class="cm">NOTE: PROCEDURE SGPLOT used (Total process time):</span><br><span class="cm">      real time           0.02 seconds</span><br><span class="cm">      cpu time            0.02 seconds</span><br><span class="cm">      memory              787.40k</span><br><span class="cm">      OS Memory           25,776.00k</span><br><span class="cm">      Timestamp           2019-08-29 14:07:16 </span><br><span class="cm">      </span><br><span class="cm">NOTE: There were 19 observations read from the data set SASHELP.CLASS.</span><br><br><span class="s">550        </span><br><span class="s">551        /* Log will appear below */</span><br><span class="s">552        </span><br><span class="s">553        ods html5 (id=saspy_internal) close;ods listing;</span><br><span class="s">554        </span><br></pre></div>
 </body>
 </html>
 
 
 
 
-### Display the output
+### Use %util_replay_ods_document() to display the output
 
 
 ```sas
@@ -2895,15 +2880,17 @@ a:visited { color: #800080 }
 
 
 
+<div style="page-break-after: always;"></div> 
+
 ## Appendix 3: Installation
 
 Jupyter is basically a big Python application.  I run it on Windows in Anaconda, which is a pre-packaged installation of Python and various tools.  Jupyter is one of those tools.
 
 Anaconda has an interactive prompt, which you can use to start Jupyter, Python, or other programs.  After the initial installation, you won't need the use the prompt except to run nbdime.
 
-If you're lucky, someone in your IT department will set this up for you.  But if not, you can set it up yourself.  All programs can be installed in single-user mode, and so does not need admin rights.  Jupyter depends on Anaconda, an implementation of Python.
+If you're lucky, someone in your IT department will set this up for you.  But if not, you can set it up yourself.  All programs can be installed in single-user mode, and so do not need admin rights.  
 
-I didn't mention this earlier, but there are actually 3 different versions of Jupyter Notebooks: the tradition notebook, which has the most features but is deprecated, and I have found it to be unstable; Jupyter Lab, supposedly the way of the future, with many fewer extensions but a cleaner interface; and Jupyter Hub, a multi-user system which I have not used.  
+I didn't mention this earlier, but there are actually 3 different versions of Jupyter Notebooks: the tradition notebook, which has the most features but is deprecated, and I have found it to be unstable; Jupyter Lab, supposedly the way of the future, with many fewer extensions but a cleaner interface, and it's what comes with SAS University Edition; and Jupyter Hub, a multi-user system which I have not used.  There's also another notebook implementation named Zeppelin that supports SAS.
 
 The instructions below are not guaranteed to work.  You may have to experiment.
 
@@ -2929,9 +2916,12 @@ jupyter lab
 ````
 
 ### SAS Kernel Installation
-[https://communities.sas.com/t5/SAS-Communities-Library/Installing-SASpy-Kernel-on-Jupyter-Notebooks/ta-p/464873](https://communities.sas.com/t5/SAS-Communities-Library/Installing-SASpy-Kernel-on-Jupyter-Notebooks/ta-p/464873)
 
-[https://sassoftware.github.io/sas_kernel/install.html](https://sassoftware.github.io/sas_kernel/install.html)
+Jupyter uses software components called _kernels_ to run programs.  Python comes built in, but you (or your administrator) will have to add the SAS kernel yourself.
+
+https://communities.sas.com/t5/SAS-Communities-Library/Installing-SASpy-Kernel-on-Jupyter-Notebooks/ta-p/464873
+
+https://sassoftware.github.io/sas_kernel/install.html
 
 To install the SAS kernel for Jupyter, type these commands at the Anaconda prompt:
 
@@ -2945,6 +2935,7 @@ The last command should show sas as a kernel.
 ### Extensions
 
 - Install Jupyter Notebook extensions and see what you've got:
+
 ````
 conda install -c conda-forge jupyter_contrib_nbextensions
 jupyter nbextension install --py sas_kernel.showSASLog
@@ -2956,17 +2947,21 @@ jupyter nbextension list
 
 I can't recommend using the traditional Jupyter notebooks, but you may have a need to, and it doesn't hurt to have the capability.
 
-- Install prerequisite for Jupyter Lab extensions and one extension, then see what's there.  The table of contents extension might already be installed.
+- Follow these instructions to enable Lab extensions.  They might already be enabled:
+
+https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
+
+
+- Install prerequisite for Jupyter Lab extensions and the table of contents extension, then see what's there.  The table of contents extension might already be installed.
 ````
 conda install -c conda-forge nodejs
 jupyter labextension install @jupyterlab/toc
 jupyter labextension list
 ````
 
-Follow these instructions to enable Lab extensions
-https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
+You might need to enable extensions before you can use them.  Open the command palette (it's the icon that looks like a palette) and type _extension_; if extensions are turned off you will be able to turn them on here.
 
-- nbdime / nbdiff
+- Install nbdime / nbdiff for difference listings
 
 https://nbdime.readthedocs.io/en/latest/
 https://github.com/jupyter/nbdime
@@ -2984,32 +2979,46 @@ jupyter labextension install nbdime-jupyterlab
 ````
 
 The Jupyter interface is designed to compare two versions of the same file, either the current and a checkpoint, or the current and a Git version.  To compare two
-notebooks from the Anaconda command line, issue, eg.
+notebooks from the Anaconda command line, run:
 
 ````
 nbdiff-web notebook1.ipynb notebook2.ipynb
 ````
 https://nbdime.readthedocs.io/en/latest/
 
+- You can also use the extension manager to install extensions.
+
+Here's what I currently have installed:
+
+![](images/extensions.png)
+
+I disabled the experiments_ext extension for this presentation, but you might want to look at the documentation to see if it's something you want.
+
 ### LaTex
 
-If you want to install LaTeX, issue the following commands:
+If you aren't using a separate markdown editor, you might need to install LaTex to print PDFs of your notebooks.
+
+Issue the following commands:
 
 ```` bash
 conda install -c conda-forge miktex
 ````
-The first time you try to use LaTeX to print to PDF, you will be prompted to install additional packages.
+
+The first time you try to use LaTeX to print to PDF, you will be prompted to install additional packages.  
 
 ### Passwords
 
-For information about Jupyter passwords, see
+For information about Jupyter passwords, see:
 
 https://jupyter-notebook.readthedocs.io/en/stable/security.html
+
+I hard-code a userid and encoded password in my configuration file, but you might not want to do that.
 
 
 ### Configuration file
 
-All of the instructions here will __not__ work for you, but they may be of help
+All of the instructions here will __not__ work for you, but they may be of help.
+
 - Open Jupyter and create a new Python notebook containing the statements
 
 ```` Python
